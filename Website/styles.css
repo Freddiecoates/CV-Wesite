@@ -1,0 +1,161 @@
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  color: #007acc;
+}
+
+/* Button */
+.btn {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.download-btn {
+  display: none; /* Will be visible only on Home page */
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Hero Section (Home) */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #b1c0b7;
+  padding: 40px;
+  border-radius: 8px;
+  position: relative;
+}
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  font-size: 1.5rem;
+}
+.iframe-container {
+  flex: 1;
+  min-width: 300px;
+  display: none; /* Initially hidden; toggled by JS */
+  padding: 20px;
+}
+.iframe-container iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Content Section (About, Experience) */
+.content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.content h1 {
+  margin-bottom: 20px;
+}
+.content h2 {
+  margin: 20px 0 10px;
+}
+.experience-item {
+  margin-bottom: 20px;
+}
+.experience-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.date-range {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Skills List */
+.skills-list {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .download-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
